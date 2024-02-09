@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Product sans;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.box {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  /* background-color: red; */
+}
+
+#video {
+  width: 70vw;
+  height: 70vh;
+  border: 1px solid #121212;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#start {
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background-color: #121212;
+  color: #fff;
+  font-size: 18px;
+}

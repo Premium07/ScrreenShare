@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="box">
+      <div class="vid">
+        <video id="video" src="" autoplay style="display: none"></video>
+      </div>
+      <button id="start">Start Screen Share</button>
+    </div>
+    <script>
+      const start = document.querySelector("#start");
+      const video = document.querySelector("#video");
+
+      start.addEventListener("click", async () => {
+        try {
+          const stream = await navigator.mediaDevices.getDisplayMedia({
+            video: true,
+          });
+          video.srcObject = stream;
+          video.style.display = "block";
+        } catch (err) {
+          console.error("Error accessing screen media: ", err);
+        }
+      });
+    </script>
+  </body>
+</html>
